@@ -2,22 +2,33 @@
 // Rooster Roofing - Main Scripts
 // ================================
 
-// Mobile Menu Toggle
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("mobile-menu-toggle");
   const mobileMenu = document.getElementById("mobile-menu");
 
   if (toggleBtn && mobileMenu) {
-    toggleBtn.addEventListener("click", () => {
-      const isOpen = mobileMenu.classList.contains("hidden");
+    // Ensure initial state
+    mobileMenu.classList.add(
+      "transition-all", 
+      "duration-300", 
+      "ease-in-out", 
+      "opacity-0", 
+      "max-h-0", 
+      "overflow-hidden"
+    );
 
-      if (isOpen) {
-        mobileMenu.classList.remove("hidden");
-        mobileMenu.classList.add("block");
+    toggleBtn.addEventListener("click", () => {
+      const isClosed = mobileMenu.classList.contains("max-h-0");
+
+      if (isClosed) {
+        // Open animation
+        mobileMenu.classList.remove("opacity-0", "max-h-0");
+        mobileMenu.classList.add("opacity-100", "max-h-screen");
         toggleBtn.setAttribute("aria-expanded", "true");
       } else {
-        mobileMenu.classList.remove("block");
-        mobileMenu.classList.add("hidden");
+        // Close animation
+        mobileMenu.classList.remove("opacity-100", "max-h-screen");
+        mobileMenu.classList.add("opacity-0", "max-h-0");
         toggleBtn.setAttribute("aria-expanded", "false");
       }
     });
