@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Privacy Policy - Rooster Roofing</title>
+    <meta name="description" content="Review the privacy policy for Rooster Roofing. We are committed to protecting your personal data and being transparent about how we collect, use, and disclose your information." />
+    <meta name="author" content="Rooster Roofing" />
+    <meta name="keywords" content="privacy policy, roofing company privacy, data protection, customer privacy, Rooster Roofing" />
+    <meta property="og:title" content="Privacy Policy - Rooster Roofing" />
+    <meta property="og:description" content="Learn how Rooster Roofing handles and protects your data when you use our website and services." />
+    <meta property="og:image" content="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13).png?updatedAt=1752077429449" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DJN211H3FJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DJN211H3FJ');
+</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    border: 'hsl(var(--border))',
+                    input: 'hsl(var(--input))',
+                    ring: 'hsl(var(--ring))',
+                    background: 'hsl(var(--background))',
+                    foreground: 'hsl(var(--foreground))',
+                    primary: {
+                        DEFAULT: 'hsl(var(--primary))',
+                        foreground: 'hsl(var(--primary-foreground))'
+                    },
+                    secondary: {
+                        DEFAULT: 'hsl(var(--secondary))',
+                        foreground: 'hsl(var(--secondary-foreground))'
+                    },
+                    muted: {
+                        DEFAULT: 'hsl(var(--muted))',
+                        foreground: 'hsl(var(--muted-foreground))'
+                    },
+                    card: {
+                        DEFAULT: 'hsl(var(--card))',
+                        foreground: 'hsl(var(--card-foreground))'
+                    },
+                    'roofing-slate': 'hsl(var(--roofing-slate))',
+                    'roofing-terra': 'hsl(var(--roofing-terra))',
+                    'emergency': 'hsl(var(--emergency))',
+                },
+                borderRadius: {
+                    lg: 'var(--radius)',
+                    md: 'calc(var(--radius) - 2px)',
+                    sm: 'calc(var(--radius) - 4px)'
+                },
+                boxShadow: {
+                    'card': 'var(--shadow-card)',
+                    'hero': 'var(--shadow-hero)',
+                    'button': 'var(--shadow-button)'
+                },
+                backgroundImage: {
+                    'gradient-hero': 'var(--gradient-hero)',
+                    'gradient-service': 'var(--gradient-service)',
+                    'gradient-cta': 'var(--gradient-cta)'
+                },
+                animation: {
+                    pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                }
+            }
+        }
+    }
+  </script> 
+</head>
+<body class="bg-background">
+  <header class="bg-card/80 backdrop-blur-sm shadow-card border-b border-border sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-2">
+        <div class="flex items-center flex-shrink-0"> <a href="/" class="justify-start flex-shrink-0"> <img src="https://ik.imagekit.io/roosterroofing/Logo%20Icon.png?updatedAt=1753913620033" alt="Rooster Roofing Logo" class="h-16 sm:h-24 w-auto [filter:drop-shadow(4px_3px_2px_rgba(0,0,0,1.5))]"> </a>
+          <div class="ml-1 items-center justify-start"> <a href="/"> <span class="block text-3xl md:text-4xl lg:text-4xl font-bold text-red-600 leading-tight [text-shadow:2px_2px_2px_hsl(var(--foreground)/2.5)] whitespace-nowrap">ROOSTER ROOFING</span> </a>
+            <div id="location-widget" class="relative hidden flex items-center space-x-1 mt-1 whitespace-nowrap"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary h-4 w-4 sm:h-5 sm:w-5">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="flex items-center space-x-1">
+                <div class="flex items-center justify-start space-x-1 cursor-pointer"> <span id="location-display" class="text-xs sm:text-md md:text-lg font-medium text-foreground whitespace-nowrap">Detecting...</span> <svg id="location-arrow" class="arrow w-4 h-4 flex items-center justify-start" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg> </div> <span id="in-area-message" class="text-xs sm:text-md font-semibold whitespace-nowrap"></span> <span id="out-of-area-message" class="text-xs sm:text-md text-red-600 font-semibold whitespace-nowrap"></span>
+              </div>
+              <div id="location-menu" class="absolute top-full left-0 mt-2 bg-gradient-service border border-border rounded-md shadow-lg hidden z-10">
+                <ul id="location-list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="hidden lg:flex items-center justify-center flex-grow text-sm font-medium text-foreground">
+          <div id="visible-nav-links" class="flex-row items-center justify-between space-x-8"></div>
+          <div class="relative ml-6" id="overflow-nav-container" style="display: none;"> <button id="overflow-nav-button" class="flex items-center gap-1 hover:text-red-700 hover:text-xl transition-colors"> More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg> </button>
+            <div id="overflow-nav-menu" class="absolute right-0 mt-0 w-48 bg-card rounded-md shadow-lg py-1 z-20 hidden hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]"></div>
+          </div>
+        </nav>
+        <div id="master-nav-links" class="hidden">
+          <a href="/" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Home</a>
+          <a href="/residential/" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Residential</a>
+          <a href="/commercial/" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Commercial</a>
+          <a href="/repairs/" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Roof Repairs</a>
+          <a href="/gallery/" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Gallery</a>
+          <a href="/blog/" class="hover:text-xl hover:text-red-700 hover:font-bold transition-colors hover:[text-shadow:2px_2px_2px_hsl(var(--muted-foreground)/0.5)]">Blog</a>
+        </div>
+        <div class="lg:hidden"> <button id="mobile-menu-button" class="text-foreground"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg> </button> </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden bg-card border-t border-border">
+      <a href="/" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Home</a>
+      <a href="/residential/" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Residential</a>
+      <a href="/commercial/" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Commercial</a>
+      <a href="/repairs/" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Roof Repairs</a>
+      <a href="/gallery/" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Gallery</a>
+      <a href="/blog/" class="block py-2 px-4 text-sm hover:text-primary-foreground hover:font-bold hover:bg-red-700 hover:text-lg transition-colors">Blog</a>
+    </div>
+  </header>
+
+    <main class="bg-card">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+            
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold text-foreground">Privacy Policy</h1>
+                <p class="mt-4 text-lg text-muted-foreground">Last updated: September 09, 2025</p>
+            </div>
+
+            <div class="mt-16 space-y-12">
+                <section>
+                    <h2 class="text-2xl font-bold text-foreground border-b border-border pb-3 mb-6">1. Interpretation and Definitions</h2>
+                    <p class="text-muted-foreground mb-6">This Privacy Policy describes Our policies and procedures on the collection, use, and disclosure of Your information when You use the Service. It informs You about Your privacy rights and how the law protects You. By using our Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Definitions</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><p class="text-muted-foreground"><strong>You</strong> means the individual accessing or using the Service, or the company or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><p class="text-muted-foreground"><strong>Company</strong> (referred to as "the Company", "We", "Us", or "Our") refers to Rooster Roofing, LLC, 1858 Ringling Blvd, Ste 200, Sarasota, FL 34236.</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span><p class="text-muted-foreground"><strong>Service</strong> refers to the Rooster Roofing website, accessible from https://www.roosterroofingnow.com.</p></li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2 class="text-2xl font-bold text-foreground border-b border-border pb-3 mb-6">2. Collecting and Using Your Personal Data</h2>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Types of Data Collected</h3>
+                    <p class="text-muted-foreground mb-4">While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You, such as when you fill out a contact form or use our estimator. This includes:</p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></span><p class="text-muted-foreground">First and last name</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></span><p class="text-muted-foreground">Email address</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg></span><p class="text-muted-foreground">Phone number</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><p class="text-muted-foreground">Property address (Street, City, State, ZIP/Postal code)</p></li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-foreground mb-4">Use of Your Personal Data</h3>
+                    <p class="text-muted-foreground mb-4">The Company uses your Personal Data to provide and improve our Service. This includes managing your requests for quotes, contacting you about our services, undertaking contracts, and analyzing usage trends to enhance your experience.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-foreground border-b border-border pb-3 mb-6">3. Third-Party Services</h2>
+                    <p class="text-muted-foreground mb-4">Our Service utilizes third-party tools to enhance functionality. These services may collect information as part of their standard operation and their use of your information is governed by their own privacy policies.</p>
+                     <ul class="space-y-3">
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg></span><p class="text-muted-foreground"><strong>Gorilla Roof Leads:</strong> Powers our "Instant Roof Estimator."</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg></span><p class="text-muted-foreground"><strong>Elfsight:</strong> Displays our Google Reviews.</p></li>
+                        <li class="flex items-start"><span class="flex-shrink-0 mr-3 mt-1 w-5 h-5 text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10.5V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h12.5"></path><path d="m17 13 5 5-5 5"></path><path d="M3 14h19"></path></svg></span><p class="text-muted-foreground"><strong>FormSubmit.co:</strong> Manages our contact form submissions.</p></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-foreground border-b border-border pb-3 mb-6">4. Data Security & Children's Privacy</h2>
+                    <p class="text-muted-foreground mb-4">The security of Your Personal Data is important to Us, but no method of transmission over the Internet is 100% secure. We strive to use commercially acceptable means to protect Your data but cannot guarantee its absolute security.</p>
+                    <p class="text-muted-foreground">Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and discover that Your child has provided Us with Personal Data, please contact Us immediately.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-bold text-foreground border-b border-border pb-3 mb-6">5. Contact Us</h2>
+                    <p class="text-muted-foreground mb-4">If you have any questions about this Privacy Policy, please contact us:</p>
+                    <div class="space-y-3 text-muted-foreground">
+                        <p><strong>Email:</strong> <a href="mailto:info@roosterroofingnow.com" class="text-primary hover:underline hover:text-red-700">info@roosterroofingnow.com</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:9417249355" class="text-primary hover:underline hover:text-red-700">(941) 724-9355</a></p>
+                        <p><strong>Mail:</strong> 1858 Ringling Blvd, Ste 200, Sarasota, FL 34236</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+  <div class="elfsight-app-6a41cf36-190b-4d30-9141-4e717f1eea6f" data-elfsight-app-lazy></div>
+  <footer class="bg-primary text-primary-foreground">
+    <div class="max-w-7xl mx-auto px-6 md:px-8 lg:px-10 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        <div class="flex flex-col md:col-span-2 items-center lg:items-start space-y-2"> <a href="/" class="flex-shrink-0"> <img src="https://ik.imagekit.io/roosterroofing/Untitled%20design%20(13)_edited.png?updatedAt=1753709806719" alt="Rooster Roofing Logo" class="max-w-md h-40 w-auto lg:h-48 lg:w-auto mx-auto"> </a>
+          <p class="text-center lg:text-start text-primary-foreground max-w-md [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]"> Certified roofing contractor. Licensed, insured, and committed to protecting your property with quality workmanship and exceptional service. </p>
+        </div>
+        <div>
+          <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Quick Links</h4>
+          <ul class="text-center lg:text-start space-y-2 text-primary-foreground/80">
+            <li><a href="/" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Home</a></li>
+            <li><a href="/about/" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">About Us</a></li>
+            <li><a href="/contact/" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Contact Us</a></li>
+            <li><a href="/services/" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Our Services</a></li>
+            <li><a href="/areas/" class="hover:underline hover:text-red-700 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">Areas We Serve</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-center lg:text-start text-lg font-bold text-primary-foreground mb-4 [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)]">Contact Info</h4>
+          <div class="text-center lg:text-start space-y-3 text-primary-foreground/80 whitespace-nowrap">
+            <div><a href="tel:9417249355" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-9355</a></div>
+            <div><a href="tel:9417243470" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">(941) 724-3470</a></div>
+            <div><a href="mailto:info@roosterroofingnow.com" class="hover:underline hover:text-red-700 ml-1 transition-colors hover:font-bold hover:[text-shadow:1px_1px_4px_hsl(var(--primary-foreground)/1.5)]">info@roosterroofingnow.com</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground">
+        <p>© 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br /> <a href="/privacypolicy/" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Privacy Policy</a> | <a href="/termsofservice/" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Terms of Service</a> </p>
+      </div>
+    </div>
+  </footer>
+  <script src="/script.js" defer></script>
+</body>
+</html>
