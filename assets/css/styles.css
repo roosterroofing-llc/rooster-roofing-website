@@ -1,119 +1,124 @@
-/* Embedding the custom design system and styles */
+/* ===================================================
+   1. Design System (Variables, Theme, Fonts)
+=================================================== */
 :root {
-    /* Blue-Green Theme */
-    --primary: 200 70% 25%;            /* Dark Blue-Green for header */
-    --primary-foreground: 0 0% 98%;    /* White text on dark background */
-    --background: 200 30% 94%;         /* Light Blue-Green for body */
-    --foreground: 300 65% 15%;         /* Black text on light background */
+  --primary: 200 70% 25%;
+  --primary-foreground: 0 0% 98%;
+  --background: 200 30% 94%;
+  --foreground: 300 65% 15%;
+  --destructive: 350 90% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 15%;
+  --secondary: 50 75% 60%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 190 40% 90%;
+  --muted-foreground: 215 20% 45%;
+  --accent: 190 60% 60%;
+  --accent-foreground: 215 25% 15%;
+  --border: 190 20% 80%;
+  --input: 190 20% 80%;
+  --ring: 190 70% 25%;
+  --radius: 0.5rem;
 
-    /* Button Colors */
-    --destructive: 350 90% 30%;        /* Dark Red for buttons */
-    --destructive-foreground: 0 0% 98%;/* White text on red buttons */
+  --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(190, 50%, 30%));
+  --gradient-service: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+  --gradient-cta: linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%));
 
-    /* Additional variables may be retained from original for accents, cards, etc. */
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
-    --secondary: 50 75% 60%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 190 40% 90%;
-    --muted-foreground: 215 20% 45%;
-    --accent: 190 60% 60%;
-    --accent-foreground: 215 25% 15%;
-    --border: 190 20% 80%;
-    --input: 190 20% 80%;
-    --ring: 190 70% 25%;
-    --radius: 0.5rem;
-
-    /* Gradients and Shadows (optional, update if used) */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(190, 50%, 30%));
-    --gradient-service: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
-    --gradient-cta: linear-gradient(135deg, hsl(var(--destructive)), hsl(350, 70%, 40%));
-    --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.1);
-    --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
-    --shadow-button: 0 4px 8px -2px hsl(var(--destructive) / 0.4);
-}
-body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-/* Typographic Animation Styles */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animate-fade-in-up {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.hero-headline-word > span {
-    display: inline-block;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.sc-iGgWBj {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-}
-
-/* Location Modal Styles */
-.location-modal {
-    transition: opacity 0.3s ease;
-}
-
-.location-modal-content {
-    transition: transform 0.3s ease;
-}
-
-/* Location Widget Styles */
-#location-widget .arrow {
-    transition: transform 0.2s;
-}
-#location-widget:hover .arrow {
-    transform: rotate(180deg);
-}
-
-/* Add this to the end of your styles.css file */
-#in-area-message {
-    color: #16a34a; /* This is a green color */
-}
-
-/* Custom styles for the location dropdown */
-#location-select {
-    background-image: var(--gradient-service);
-    color: hsl(var(--foreground));
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.375rem; /* Equivalent to rounded-md */
-    border: 1px solid hsl(var(--border));
-    transition: background-color 0.2s, color 0.2s;
-}
-
-#location-select:hover {
-    background-image: none; /* Remove gradient on hover */
-    background-color: hsl(0, 72%, 51%); /* This is a standard red-700 color */
-    color: hsl(var(--primary-foreground));
-}
-
-/* Custom styles for the new location dropdown menu */
-#location-menu {
-    min-width: 150px; /* Ensures the dropdown has a nice width */
+  --shadow-card: 0 4px 12px -2px hsl(var(--primary) / 0.1);
+  --shadow-hero: 0 20px 40px -10px hsl(var(--primary) / 0.3);
+  --shadow-button: 0 4px 8px -2px hsl(var(--destructive) / 0.4);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
-/* Button Animation */
+/* ===================================================
+   2. Base Styles
+=================================================== */
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.sc-iGgWBj {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* ===================================================
+   3. Animations
+=================================================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-headline-word > span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mask-position {
+  to {
+    -webkit-mask-position: var(--mask-position-to);
+    mask-position: var(--mask-position-to);
+  }
+}
+
+/* ===================================================
+   4. Components
+=================================================== */
+
+/* Location Widget */
+.location-modal { transition: opacity 0.3s ease; }
+.location-modal-content { transition: transform 0.3s ease; }
+#location-widget .arrow { transition: transform 0.2s; }
+#location-widget:hover .arrow { transform: rotate(180deg); }
+#in-area-message { color: #16a34a; }
+
+/* Dropdowns */
+#location-select {
+  background-image: var(--gradient-service);
+  color: hsl(var(--foreground));
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid hsl(var(--border));
+  transition: background-color 0.2s, color 0.2s;
+}
+#location-select:hover {
+  background-image: none;
+  background-color: hsl(0, 72%, 51%);
+  color: hsl(var(--primary-foreground));
+}
+#location-menu { min-width: 150px; }
+
+/* Services Tabs */
+.services-container { display: flex; justify-content: center; padding: 2rem 0; }
+.popup { width: 100%; max-width: 1400px; display: flex; border-radius: 24px; overflow: hidden; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.tabs { width: clamp(150px, 20vw, 350px); background: #f8fafc; display: flex; flex-direction: column; border-right: 1px solid #e5e7eb; }
+.tabs label { font-size: clamp(15px, 1.5vw, 18px); font-weight: 600; padding: clamp(0.75rem, 2vw, 1rem); cursor: pointer; transition: all .3s ease; color: hsl(var(--foreground)); border-left: 4px solid transparent; }
+.tabs label:hover, input[type="radio"]:checked+label { background: #b91c1c; color: hsl(var(--primary-foreground)); border-left: 4px solid #dc2626; font-weight: bold; text-shadow: 2px 2px 2px hsl(var(--foreground) / 1.5); }
+input[type="radio"] { display: none; }
+.content-area { flex: 1; padding: 2rem; }
+.service-content { display: none; animation: fadeIn .4s ease-in-out; }
+.service-content.active { display: block; }
+
+/* Animated Button */
 .animated-button {
   justify-content: flex-start !important;
   text-align: left !important;
@@ -190,3 +195,99 @@ body {
     mask-position: var(--mask-position-to);
   }
 }
+
+/* Swiper / Slider */
+    .c {
+      width: 100%;                  /* take full width of parent container */
+      max-width: 100%;              /* no shrinking below container size */
+      height: auto;                 /* let height adapt */
+      aspect-ratio: 16 / 15;         /* keeps proportion across screens */
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;  /* align content to the left */
+      position: relative;
+      overflow: hidden;
+      background: hsl(0 0% 90%);
+      box-sizing: border-box;
+      margin: 0;                    /* no centering */
+      font-family: 'Raleway', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    }
+    
+    .c .ci {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: left 50%;
+      background: inherit;
+      z-index: var(--z);
+      transition: .3s ease-out;
+    }
+    
+    .c .ci img {
+      -moz-user-select: none;
+      user-select: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .c .ch {
+      position: absolute;
+      top: 65%;
+      left: 2%;
+      transform: translateY(-50%);
+      font-size: clamp(1rem, 2vw, 2rem); /* scales text between 1rem and 2rem */
+      color: hsla(var(--h) var(--s) var(--l) / .8);
+      text-shadow: 2px 2px 10px hsla(var(--h) var(--s) 10% / .3);
+    }
+    
+    .c input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      z-index: -10;
+    }
+    
+    .c label {
+      width: clamp(8%, 40px, 10%);  /* flexible width depending on screen */
+      height: 10px;
+      margin-right: 4px;
+      border-radius: 20px;
+      background: hsla(0 0% 90% / .3);
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .c label:last-child {
+      margin-right: 0;
+    }
+    
+    .c input:checked+label {
+      background: linear-gradient(to right,
+      hsla(var(--hue) 80% 70% / .7),
+      hsla(calc(var(--hue) + 30) 80% 50% / .7));
+    }
+    
+    .c input:not(:checked)+label+.ci {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    
+    .c .ci:last-child input:checked~.ci {
+      transform: translateX(100%);
+    }
+    
+    .c input:not(:checked)+label+.ci {
+      transition: 0s;
+    }
+
+/* ===================================================
+   5. Utilities (helpers, spacing overrides, etc.)
+=================================================== */
+/* Add any small utility classes here */
