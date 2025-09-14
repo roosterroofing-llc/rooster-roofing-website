@@ -46,7 +46,7 @@
       <!-- Bottom Bar -->
       <div class="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground">
         <p>
-          © 2024 Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br>
+          © <span id="current-year"></span> Rooster Roofing, LLC. All rights reserved. LIC. No. CCC1335999.<br>
           <a href="/privacypolicy/" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Privacy Policy</a> |
           <a href="/termsofservice/" class="font-bold hover:underline hover:text-primary-foreground transition-colors [text-shadow:2px_2px_2px_hsl(var(--foreground)/1.5)] hover:[text-shadow:2px_2px_2px_hsl(var(--destructive)/2.5)]">Terms of Service</a>
         </p>
@@ -56,6 +56,9 @@
 
   <!-- Scripts -->
   <script src="/assets/js/main.js"></script>
-
+  <script>
+    // Auto-update year
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
